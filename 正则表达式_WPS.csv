@@ -1,0 +1,11 @@
+查找目标,通配符,示例
+任意单个字符,？,A?B 查找 ACB
+任意字符串,*,管*局 查找 管理者当局
+单词的开头,<,"<(com) 查找 come, command, 但不能查找 recomfort"
+指定字符之一,[],"co[mn]e 查找 come, cone, comet 等"
+指定范围内任意单个字符,[r-t]ight,"查找 right, sight 等，必须用升序表示范围"
+中括号内指定字符范围以外的任意单个字符,[!x-z],"如 t[!a-m]ck, 查找 tock, tuck, 但不能查找 tack 和 tick"
+n 个重复的前一字符或表达式,{n},"如 com{2} 查找 command, commonable 等"
+至少 n 个前一字符或表达式,"{n, }","如 com{1, } 可查找 come, command 等"
+n 到 m 个前一字符或表达式,"{n, m}","如 10{1, 3}, 查找 10, 100, 1000 等"
+一个以上的前一字符或表达式,@,"如 lo@t, 查找 lot, loot 等"
